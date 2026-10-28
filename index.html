@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Quiz<span>Master</span></h1>
+      <p>Test your knowledge. Beat the clock.</p>
+    </header>
+
+    <!-- Screen 1: Category selection -->
+    <section id="start-screen" class="screen active">
+      <h2>Choose a category</h2>
+      <div id="category-list" class="category-grid"></div>
+    </section>
+
+    <!-- Screen 2: Quiz -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-top">
+        <span id="quiz-category" class="badge"></span>
+        <span id="timer" class="timer">02:00</span>
+      </div>
+      <div class="progress"><div id="progress-bar"></div></div>
+      <p id="question-count" class="muted"></p>
+      <h3 id="question-text"></h3>
+      <div id="options" class="options"></div>
+      <div class="nav">
+        <button id="prev-btn" class="btn secondary">Previous</button>
+        <button id="next-btn" class="btn">Next</button>
+        <button id="submit-btn" class="btn success hidden">Submit</button>
+      </div>
+    </section>
+
+    <!-- Screen 3: Results -->
+    <section id="result-screen" class="screen">
+      <h2 id="result-title">Quiz Complete</h2>
+      <div class="score-ring">
+        <strong id="score-percent">0%</strong>
+        <span id="score-text">0 / 0</span>
+      </div>
+      <p id="best-score" class="muted center"></p>
+
+      <div class="summary">
+        <div><b id="sum-total">0</b><span>Total</span></div>
+        <div><b id="sum-attempted">0</b><span>Attempted</span></div>
+        <div class="good"><b id="sum-correct">0</b><span>Correct</span></div>
+        <div class="bad"><b id="sum-incorrect">0</b><span>Incorrect</span></div>
+      </div>
+
+      <h3>Answer review</h3>
+      <div id="review"></div>
+
+      <div class="nav">
+        <button id="restart-btn" class="btn">Restart Quiz</button>
+        <button id="another-btn" class="btn secondary">Another Category</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
